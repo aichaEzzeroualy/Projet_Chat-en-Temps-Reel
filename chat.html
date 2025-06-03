@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="chat-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="shortcut icon" href="logo.png" type="image/png">
+</head>
+<body>
+    <div class="chat-app">
+        <div class="chat-header">
+            <h1><i class="fas fa-comments"></i> Chat App</h1>
+            <div class="user-info">
+                <!-- Removed user avatar image -->
+                <span id="currentUsername"></span>
+                <button id="logoutBtn" class="btn-logout"><i class="fas fa-sign-out-alt"></i></button>
+            </div>
+        </div>
+        <div class="chat-container">
+            <div class="users-list">
+                <div class="friends-section">
+                    <h3><i class="fas fa-user-friends"></i> Mes amis</h3>
+                    <ul id="friendsList">
+                        <!-- Friends will be populated here -->
+                        <li id="noFriendsMessage" class="no-friends-message">
+                            <i class="fas fa-info-circle"></i> Aucun ami. Ajoutez un ami pour commencer à discuter.
+                        </li>
+                    </ul>
+                    <div class="add-friend">
+                        <input type="text" id="friendUsername" placeholder="Email d'utilisateur">
+                        <button type="button" id="addFriendBtn" class="btn-add-friend">
+                            <i class="fas fa-user-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-area">
+                <div id="welcomeMessage" class="welcome-message">
+                    <i class="fas fa-comments welcome-icon"></i>
+                    <h2>Bienvenue sur Chat App</h2>
+                    <p>Sélectionnez un ami dans la liste pour commencer à discuter</p>
+                </div>
+                
+                <div id="activeChatArea" class="active-chat-area" style="display: none;">
+                    <div class="active-chat-header">
+                        <h3><i class="fas fa-comment"></i> Chat avec <span id="currentChatFriend"></span></h3>
+                    </div>
+                    <div class="messages" id="messagesContainer">
+                        <!-- Messages will appear here -->
+                    </div>
+                    <div class="message-input">
+                        <form id="messageForm">
+                            <input type="text" id="messageInput" placeholder="Écrivez un message..." autocomplete="off">
+                            <button type="submit" class="btn-send"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="js/chat.js"></script>
+    <!-- Zone des notifications -->
+    <div id="notifications"></div>
+</body>
+</html>

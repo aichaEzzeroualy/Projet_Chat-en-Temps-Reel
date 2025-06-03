@@ -1,0 +1,2 @@
+abdjalil,abdjalil@gmail.com,abd123,["kamal"]
+kamal,kamal@gmail.com,kamal123,["abdjalil"]

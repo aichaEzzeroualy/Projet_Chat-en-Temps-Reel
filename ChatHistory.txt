@@ -1,0 +1,18 @@
+{
+  "abdjalil-kamal": [
+    {
+      "sender": "kamal",
+      "recipient": "abdjalil",
+      "content": "hi",
+      "timestamp": "2025-05-27T16:31:52.449Z",
+      "id": "msg-1748363512449-pr5zarb85"
+    },
+    {
+      "sender": "abdjalil",
+      "recipient": "kamal",
+      "content": "slut",
+      "timestamp": "2025-05-27T16:31:57.883Z",
+      "id": "msg-1748363517883-ndgn2egjy"
+    }
+  ]
+}
